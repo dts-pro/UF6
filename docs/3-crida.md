@@ -27,10 +27,10 @@ public static void main(String[] args) {
 }
 ```
 
->Exemple: Programa amb una funció que suma dos números.
+>***Exemple: Programa amb una funció que suma dos números.***
 >
->![Exemple funció suma](../UD6/img/exemple_suma.jpg)
+>![Exemple funció suma](uf6/exemple_suma.jpg)
 
->Exemple: Programa amb una funció que determina si un número és parell o imparell.
+>***Exemple: Programa amb una funció que determina si un número és parell o imparell.***
 >
->![Exemple funció par](../UD6/img/exemple_par.jpg)
+>![Exemple funció par](uf6/exemple_par.jpg)

@@ -80,7 +80,7 @@ Aquesta funció es diu ‘sumaVector’, té un paràmetre d'entrada tipus int[]
 
 És important saber que les funcions es declaren **dins de ‘class’** però **fora del ‘main’**.
 
-![Declaració de funcions](../UD6/img/Declaracio_funcio.jpg)
+![Declaració de funcions](uf6/Declaracio_funcio.jpg)
 
 En aquest programa tenim 4 funcions: imprimeixHolaMon, doble, multiplica i main. Sí, el ‘main’ on sempre has programant fins ara és en efecte una funció, però una mica especial: ‘main’ es la funció principal, el punt d’inici d’un programa.
 
