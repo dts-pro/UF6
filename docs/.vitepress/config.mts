@@ -5,7 +5,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   lang: 'ca-ES',
-  title: 'Títol',
+  title: 'UF6 - Funcions',
   description: 'Descripció',
   base: '/',
   outDir: './dist',
@@ -44,7 +44,7 @@ export default withMermaid({
         { text: 'Exercicis', link: '/9-exercicis' },
       ]},
       { text: '📚 Continguts addicionals', items: [
-        { text: 'For en format foreach', link: '/13-add_foreach' },
+        { text: 'Convertir lletra a número', link: '/10-add_lletranumero' },
       ]}
     ],
     sidebar: [
@@ -63,7 +63,7 @@ export default withMermaid({
         ]
       },
       { text: '📚 Continguts addicionals', items: [
-        { text: 'For en format foreach', link: '/13-add_foreach' },
+        { text: 'Convertir lletra a número', link: '/10-add_lletranumero' },
         { text: '<img src="/img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
         { text: '<img src="/img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
       ]}

@@ -253,3 +253,174 @@ Así tens una descripció pas a pas de l'execució:
 ```
 
 I així successivament ...
+
+## 3. Exercici d'amplació
+
+**Creació de biblioteques de rutines mitjançant paquets**
+
+Si un conjunt de funcions es vol utilitzar en diversos programes es poden agrupar per crear un paquet (package) que després s'importarà des del programa que necessite aquestes funcions. Podem crear paquets específics per introduir-hi les diferents funcions, o bé es poden incloure dins de diferents fitxers en un mateix paquet.
+
+A continuació anem a descriure un exercici per a aprendre com fer-ho creant-nos un paquet amb dos arxius diferents de funcions i en un altre paquet inclourem el programa principal que farà ús d'aquestes funcions.
+
+En aquests moments, per a l'UF06 tenim creat el projecte UF06Exercicis que conté dos paquets: **curs.uf06exemples** i **cursuf06exercicis**.
+
+- Dins del projecte **UF06Exercicis** crearem un nou paquet que anomenarem **curs.uf06matematiques**.
+
+![Crear paquet matemàtiques](uf6/paquet_mates.jpg)
+
+- Dins del nou paquet creareu dos arxius (o java class): **UF06Diverses.java** i **UF06Geometria.java** dels quals a continuació descrivim el contingut.
+
+- En l’arxiu **UF06Diverses** creareu dos funcions de propòsit general com són la comprovació de si un numero és primer i el número de dígits que conté un número enter. És important que s’incloguen els comentaris amb les etiquetes que comencen per @ per a completar altres aspectes de l’exercici que vorem més endavant. Aquest és el codi que s’hi ha d’incloure:
+
+```java
+/**
+* Funcions matemàtiques de propòsit general
+*/
+public class UF06Diverses {
+
+  /**
+   * FUNCIÓ: Comprova si un número enter positiu és primer o no.
+   * @param x un número enter positiu
+   * @return <code>true</code> si el número és primer
+   * @return <code>false</code> en cas contrari
+   */
+
+  public static boolean esPrimer(int x) {
+    boolean nPrimer=true;
+
+    for (int i = 2; i < x && nPrimer; i++) {
+      if ((x % i) == 0) {
+        nPrimer=false;
+        }
+    }
+    return nPrimer;
+  }
+  /**
+  * FUNCIÓ: Retorna el número de dígits que conté un número enter
+  * @param x un número enter
+  * @return la quantitat de dígits que conté el número
+  */
+  public static int digits(int x) {
+    int n=0;
+
+    if (x == 0) n=1;
+    else {
+      while (x > 0) {
+        x = x / 10;
+        n++;
+      }
+    }
+    return n;
+  }
+}
+```
+
+- Per a l’arxiu **UF06Geometria** crearem també altres dos funcions. Aquest és el codi que hi haureu d’incloure:
+
+```java
+/**
+* Funcions geomètriques
+*/
+public class UF06Geometria {
+  /**
+  * FUNCIÓ: Calcula el volum d'un cilindre.
+  * @param r radi del cilindre
+  * @param h altura del cilindre
+  * @return volum del cilindre
+  */
+  public static double volumCilindre(double r, double h) {
+    return Math.PI * r * r * h;
+  }
+
+  /**
+  * FUNCIÓ: Calcula la longitud d'una circunferència a partir del radi.
+  * @param r radi de la circunferència
+  * @return longitud de la circunferència
+  */
+  public static double longitudCircunferencia(double r) {
+    return 2 * Math.PI * r;
+  }
+}
+```
+
+- Ara ja podeu començar a crear el codi del programa principal, però en aquesta ocasió ho fareu poc a poc per fer unes comprovacions que ens permetran respondre algunes qüestions.
+
+Aneu a crear el programa (arxiu o classe) **UF06Exercici22.java** dins del paquet curs.uf06exercicis (o on tingueu emmagatzemats la resta d’exercicis del tema).
+
+El primer que haureu de fer és importar aquestes classes per poder utilitzar les funcions matemàtiques creades abans dins.
+
+**COMPTE: Un dels estàndards que recomana Java és organitzar les importacions per orde alfabètic.**
+
+Aleshores, heu d’escriure vosaltres les dos importacions de les classes que acabeu de crear, però recordeu que s’ha de citar el paquet on estan, un punt i el nom de la classe. Si no ho feu correctament vos començaran a aparèixer errors quan inclogueu les cridades a les funcions.
+
+```java
+import ... ;
+import ... ;
+```
+
+Finalment, importarem el mètode Scanner:
+
+```java
+import java.util.Scanner;
+```
+
+Ara anem a copiar una part del codi del programa principal. El que ens interessa per a aquest exercici és arribar a la línia que haureu d’escriure poc a poc en lloc de copiar.
+
+```java
+/**
+* Prova algunes funcions
+*/
+public class UF06Exercici22 {
+  public static void main(String[] args) {
+    int n;
+    Scanner entrada = new Scanner (System.in);
+    // Prova esPrimer()
+    System.out.print("Introdueix un número enter positiu: ");
+    n = entrada.nextInt();
+ ```
+
+Seguidament aneu a escriure la següent instrucció (no copiar), i al mateix temps haureu de respondre a les qüestions que es plantegen:
+
+a) Què passa quan escrivim `if (curs.uf06matematiques.` en arribar al punt?
+
+b) A què creus que és degut açò?
+
+c) Què passa quan continuem escrivint `if (curs.uf06matematiques.UF06Diverses.` en arribar al següent punt?
+
+d) Què hem fet en les nostres funcions per a que passe açò?
+
+Completeu la línia (1a línia del següent codi) i còpieu la resta del codi.
+
+Podeu fer la mateixa prova amb la resta de mètodes o funcions esborrant caràcters i reescrivint-les fins a cada punt.
+
+```java
+    if (curs.uf06matematiques.UF06Diverses.esPrimer(n)) {
+      System.out.println("El " + n + " és primer.");
+    } else {
+      System.out.println("El " + n + " no és primer.");
+    }
+
+    // Prova digits()
+    System.out.print("Introdueix un número enter positiu: ");
+    n = entrada.nextInt();
+    System.out.println(n + " té " + 
+    curs.uf06matematiques.UF06Diverses.digits(n) + " dígits.");
+
+    // Prova volumCilindre()
+    double r, h;
+    System.out.println("Càlcul del volum d'un cilindre");
+    System.out.print("Introdueix el radi en metres: ");
+    r = entrada.nextDouble();
+    System.out.print("Introdueix l'altura en metres: ");
+    h = entrada.nextDouble();
+    System.out.println("El volum del cilindre és " + 
+    curs.uf06matematiques.UF06Geometria.volumCilindre(r, h) + " m3");
+  }
+}
+```
+
+e) Aneu ara a la classe **UF06Diverses** i elimineu la paraula **public** en la declaració de la funció **esPrimer**. A continuació executeu el programa **UF06Exercici22.java**. Quin error dona? Què significa?
+
+f) Restaureu la paraula public en la funció esPrimer i elimineu ara la paraula **static**. A continuació executeu el programa **UF06Exercici22.java**. Quin error dona? Què significa?
+
+g) Genereu la documentació del programa **UF06Exercici22.java**. Açò es fa des del menú **Run/Generate Javadoc**.
