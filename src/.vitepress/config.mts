@@ -5,10 +5,10 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   lang: 'ca-ES',
-  title: 'UF6 - Funcions',
+  title: 'UF6',
   description: 'Descripció',
-  base: '/',
-  outDir: './dist',
+  base: '/UF6',
+  outDir: '../docs',
   markdown: {
     config(md) {
       md.use(tabsMarkdownPlugin)
@@ -64,8 +64,8 @@ export default withMermaid({
       },
       { text: '📚 Continguts addicionals', items: [
         { text: 'Convertir lletra a número', link: '/10-add_lletranumero' },
-        { text: '<img src="/img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
-        { text: '<img src="/img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
+        { text: '<img src="img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
+        { text: '<img src="img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
       ]}
     ],
     socialLinks: [

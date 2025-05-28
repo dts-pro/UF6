@@ -4,7 +4,7 @@
 
 <div style="flex: 1; padding: 10px;">
 
-![Tabla ASCII](uf6/Tabla_ASCII.jpg)
+![Tabla ASCII](/uf6/Tabla_ASCII.jpg)
 
 </div>
 

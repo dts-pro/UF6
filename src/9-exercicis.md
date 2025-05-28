@@ -78,7 +78,7 @@ double intermedi1aN(int n)
 13. Realitza un programa que calcule el percentatge de descompte que ens han fet en comprar alguna cosa. S'ha de sol·licitar la quantitat sense descompte i la quantitat amb el descompte aplicat. S’ha de crear una funció a la qual li passem tots dos valors i ens retorne el descompte.
 14. Escriu una funció que mostre per pantalla un triangle com el de l'exemple. Haurà de rebre dos paràmetres: el caràcter que es desitja imprimir i el nombre de línies del triangle.  
 
-![Triangle a](uf6/triangle_a.jpg)
+![Triangle a](/uf6/triangle_a.jpg)
 
 15.  Escriu un programa que cree un array de grandària 100 amb els primers 100 nombres naturals. Després mostra la suma total i la mitjana. Implementa una funció que calcule la suma d'un array i una altra que calcule la mitjana d'un array.
 16.  Escriu un programa que cree un array de la grandària indicada per teclat i després l'emplene amb valors aleatoris (utilitza Math.random()). Implementa la funció que emplena un array amb valors aleatoris.
@@ -123,12 +123,12 @@ Modifica el programa anterior de manera que el procés es repetisca una vegada i
 
 1. Crea un programa que determini si una frase introduïda per l'usuari és un palíndrom utilitzant la recursivitat. Per exemple, "Mulla la llum" és un palíndrom.
 2. Desenvolupa un programa que utilitzi la recursivitat per calcular el MCD de dos nombres enters. Per exemple, el MCD de 15 i 25 és 5.
-![Eixida exercici 2 recursivitat](uf6/eixida_recur_2.jpg)
+![Eixida exercici 2 recursivitat](/uf6/eixida_recur_2.jpg)
 
 ## 2.2. Recursivitat - Nivell B
 
 3. Implementa un programa que utilitzi la recursivitat per generar totes les combinacions possibles de N elements. Per exemple, amb els elements [A, B, C], les combinacions serien [A, B], [A, C], [B, C], etc.
-![Eixida exercici 2 recursivitat](uf6/eixida_recur_3.jpg)
+![Eixida exercici 2 recursivitat](/uf6/eixida_recur_3.jpg)
 
 Así tens una descripció pas a pas de l'execució:  
 **Primera crida (índex 0):**
@@ -176,7 +176,7 @@ Así tens una descripció pas a pas de l'execució:
 I així successivament ...
 
 4. Implementa un programa que utilitzi la recursivitat per generar totes les permutacions d'un conjunt de N elements. Per exemple, amb els elements [A, B, C], les permutacions serien [A, B, C], [A, C, B], [B, A, C], etc.
-![Eixida exercici 2 recursivitat](uf6/eixida_recur_4.jpg)
+![Eixida exercici 2 recursivitat](/uf6/eixida_recur_4.jpg)
 
 Así tens una descripció pas a pas de l'execució:
 
@@ -214,7 +214,7 @@ I així successivament ...
 
 5. Crea un programa que utilitzi la recursivitat per calcular de quantes maneres diferents pots arribar a una suma donada utilitzant combinacions de nombres donats. Per exemple, amb els nombres [2, 3, 4] i una suma de 7, les formes podrien ser [2, 2, 3], [3, 4], etc.
 
-![Eixida exercici 2 recursivitat](uf6/eixida_recur_5.jpg)
+![Eixida exercici 2 recursivitat](/uf6/eixida_recur_5.jpg)
 
 Así tens una descripció pas a pas de l'execució:
 
@@ -266,7 +266,7 @@ En aquests moments, per a l'UF06 tenim creat el projecte UF06Exercicis que cont�
 
 - Dins del projecte **UF06Exercicis** crearem un nou paquet que anomenarem **curs.uf06matematiques**.
 
-![Crear paquet matemàtiques](uf6/paquet_mates.jpg)
+![Crear paquet matemàtiques](/uf6/paquet_mates.jpg)
 
 - Dins del nou paquet creareu dos arxius (o java class): **UF06Diverses.java** i **UF06Geometria.java** dels quals a continuació descrivim el contingut.
 
