@@ -1,4 +1,6 @@
-# 1. FUNCIONS
+# Exercicis
+
+## 1. Funcions
 
 ## 1.1. Funcions - Nivell A
 
@@ -167,7 +169,7 @@ Modifica el programa afegint una altra opció anomenada “Totes” en la qual e
 
 Modifica el programa anterior de manera que el procés es repetisca una vegada i una altra (mostrar menú &rarr; realitzar el càlcul &rarr; tornar a mostrar menú). Afig una opció més anomenada “Eixir” que acabarà el programa si és triada.
 
-## 2. RECURSIVITAT
+## 2. Recursivitat
 
 ## 2.1. Recursivitat - Nivell A
 
@@ -304,7 +306,7 @@ Así tens una descripció pas a pas de l'execució:
 
 I així successivament ...
 
-## 3. Exercici d'amplació
+## 3. Exercici d'ampliació
 
 **Creació de biblioteques de rutines mitjançant paquets**
 
