@@ -2,26 +2,26 @@
 
 La recursivitat és la capacitat d'una funció o mètode per a cridar-se a si mateixa. Això permet dividir un problema gran en problemes més xicotets similars i resoldre'ls directament.
 
-## 7.1. La recursivitat requereix sempre:
+## 7.1. Elements de la recursivitat
 
 - **Cas base**: Cas més simple que es pot resoldre directament i permet parar les recursions.
 - **Casos recursius**: Cridaes a si mateixa per a reduir el problema en una instància més menuda i simple.
 
-## 7.2. Tipus de recursivitat:
+## 7.2. Tipus de recursivitat
 
 - **Recursivitat directa**: Una funció es crida directament a si mateixa.
-- **Recursivitat indirecta**: Una funció crida a una altra que al seu torn crida a la primera. Es produeix un cicle cridaes recursives entre ambdues.
+- **Recursivitat indirecta**: Una funció crida a una altra que al seu torn crida a la primera. Es produeix un cicle crides recursives entre ambdues.
 - **Recursivitat lineal**: Cada cridada recursiva es fa sobre un subproblema diferent. Per exemple, en recórrer un arbre binari.
 - **Recursivitat en cua**: La cridada recursiva és l'última instrucció de la funció. Això permet optimitzar l'ús de la pila.
 
-## 7.3. Avantatges:
+## 7.3. Avantatges
 
 - Simplicitat conceptual i llegibilitat en alguns casos.
 - Permet resoldre problemes que es divideixen fàcilment en subproblemes.
 
-## 7.4. Desventajas:
+## 7.4. Desavantatges
 
-- Major ús de memòria per acumulació de cridaes.
+- Major ús de memòria per acumulació de crides.
 - Risc de desbordament de pila (StackOverflowError).
 
 ## 7.5. Recursivitat vs iteració
@@ -30,7 +30,11 @@ La recursivitat i la iteració (usant bucles com while o for) són dues formes d
 
 ### 7.5.1. Exemple: Suma dels números de l'1 al n
 
-**Solució iterativa utilitzant un bucle for:**
+:::: tabs
+=== Java
+
+::: tabs
+== Solució iterativa
 
 ```java
 public static int suma(int n) {
@@ -42,7 +46,7 @@ public static int suma(int n) {
 }
 ```
 
-**Solución recursiva:**
+== Solució recursiva
 
 ```java
 public static int suma(int n) {
@@ -53,6 +57,9 @@ public static int suma(int n) {
   }
 }
 ```
+
+:::
+::::
 
 **Anàlisi de les diferències:**
 

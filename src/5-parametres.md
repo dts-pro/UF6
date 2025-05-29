@@ -4,6 +4,12 @@ Existeixen dos tipus de paràmetres i és important comprendre la diferència.
 
 - **Paràmetres de tipus simple (pas per valor)**: Com int, double, boolean, char, etc. En aquest cas es passen per valor. És a dir, el valor es copia al paràmetre i per tant si es modifica dins de la funció això no afectarà el valor fora d'ella perquè són variables diferents.
 
+:::: tabs
+=== Java
+
+::: tabs
+== Codi
+
 ```java
 public static void main(String[] args) { 
   int a = 10;
@@ -20,7 +26,7 @@ public static void imprimeix_doble(int a) {
 }
 ```
 
-Eixida:
+== Eixida
 
 ```plaintext
 Valor inicial de a: 10
@@ -28,7 +34,16 @@ Valor de a en la función: 20
 Valor final de a: 10
 ```
 
+:::
+::::
+
 - **Paràmetres de tipus objecte (pas per referències)**: Com a objectes de tipus String, els Arrays, etc. En aquest cas no es copia l'objecte sinó que se li passa a la funció una referència a l'objecte original (un punter). Per això des de la funció s'accedeix directament a l'objecte que es troba fora. Els canvis que fem dins de la funció afectaran l'objecte.
+
+:::: tabs
+=== Java
+
+::: tabs
+== Codi
 
 ```java
 // Summa x a tots els elements del vector v
@@ -45,14 +60,22 @@ public static void main(String[] args) {
 }
 ```
 
-Eixida:
+== Eixida
 
 ```plaintext
 Vector antes: [0, 1, 2, 3]
 Vector después: [10, 11, 12, 13]
 ```
 
-IMPORTANT: Com un paràmetre de tipus objecte és una referència a l'objecte String o Array que està fora d'ella,sise li assigna un altre objecte es perd la referència i ja no es pot accedir a l'objecte fora de la funció. Encara que Java permet fer-ho, no s'aconsella fer-ho.
+:::
+::::
+
+::: tip IMPORTANT
+
+Com un paràmetre de tipus objecte és una referència a l'objecte String o Array que està fora d'ella,si se li assigna un altre objecte es perd la referència i ja no es pot accedir a l'objecte fora de la funció. Encara que Java permet fer-ho, no s'aconsella fer-ho.
+
+::: tabs
+== Java
 
 ```java
 // Assignem a x un nou vector, per la qual cosa x deixarà d'apuntar al vector original.
@@ -68,3 +91,5 @@ public static void funcion2(String x) {
   // el que fem ací amb x no afectarà el String original
 }
 ```
+
+:::

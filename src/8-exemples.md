@@ -4,17 +4,13 @@
 
 El factorial d'un nombre enter n, representat com a n!, es defineix com el producte de tots els nombres enters des d'1 fins a n. Per exemple: 5! = 1 x 2 x 3 x 4 x 5 = 120
 
+:::: tabs
+=== Java
+
+::: tabs
+== Versió iterativa
+
 ```java
-// Versió recursiva
-public static int factorial(int n) {
-    if (n == 1) {
-        return 1; 
-    } else {
-        return n * factorial(n-1);
-    }
-}
---------------------------------------------------
-// Versió iterativa 
 public static int factorial(int n) {
     int factorial = 1;
     for(int i = 1; i <= n; i++) {
@@ -23,6 +19,25 @@ public static int factorial(int n) {
     return factorial; 
 }
 ```
+
+== Versió recursiva
+
+```java
+public static int factorial(int n) {
+    if (n == 1) {
+        return 1; 
+    } else {
+        return n * factorial(n-1);
+    }
+}
+```
+
+:::
+::::
+
+**Solució iterativa:**
+
+- S'usa un bucle *for per a iterar des d'1 fins a n, calculant el producte en cada pas.
 
 **Solució recursiva:**
 
@@ -38,10 +53,6 @@ public static int factorial(int n) {
   6. factorial(4) retorna 6 * 4 = 24
   7. factorial(5) retorna 24 * 5 = 120
 
-**Solució iterativa:**
-
-- S'usa un bucle *for per a iterar des d'1 fins a n, calculant el producte en cada pas.
-
 ## Serie de Fibonacci
 
 La sèrie de Fibonacci comença amb els números 0 i 1, i cada número següent és la suma dels dos números anteriors. Per exemple: 0, 1, 1, 2, 3, 5, 8, 13, 21...
@@ -51,15 +62,13 @@ F(0) = 0
 F(1) = 1  
 F(n) = F(n-1) + F(n-2)
 
+:::: tabs
+=== Java
+
+::: tabs
+== Versió iterativa
+
 ```java
-// Versió recursiva
-public static int fibonacci(int n) {
-    if (n <= 1) 
-        return n;
-    return fibonacci(n-1) + fibonacci(n-2); 
-}
---------------------------------------------------
-// Versió iterativa
 public static int fibonacci(int n) {
     if (n <= 1)
         return n;
@@ -73,21 +82,54 @@ public static int fibonacci(int n) {
 }
 ```
 
-**Solució recursiva:**
+== Versió recursiva
 
-- Casos base: F(0)=0 i F(1)=1
-- Cas general: Suma els dos números anteriors cridant *recursivamente a la funció.
+```java
+// Versió recursiva
+public static int fibonacci(int n) {
+    if (n <= 1) 
+        return n;
+    return fibonacci(n-1) + fibonacci(n-2); 
+}
+```
+
+:::
+::::
 
 **Solució iterativa:**
 
 - Inicialitza dues variables amb els valors 0 i 1.
 - Usa un bucle per a anar calculant i desplaçant els valors.
 
+**Solució recursiva:**
+
+- Casos base: `F(0) = 0` i `F(1) = 1`
+- Cas general: Suma els dos números anteriors cridant *recursivament a la funció.
+
 ## Suma de dígits
 
 Donat un nombre enter n, hem de calcular la suma dels seus dígits individuals.
 
 Per exemple: si n = 5324, la suma dels seus dígits és 5 + 3 + 2 + 4 = 14.
+
+:::: tabs
+=== Java
+
+::: tabs
+== Versió iterativa
+
+```java
+public static int sumaDigits(int x) {
+    int suma = 0;
+    while (x > 0) {
+        suma += x % 10;
+        x /= 10;
+    } 
+    return suma;
+}
+```
+
+== Versió recursiva
 
 ```java
 // Versió recursiva
@@ -96,17 +138,15 @@ public static int sumaDigits(int x) {
         return x;
     return x % 10 + sumaDigits(x / 10); 
 }
---------------------------------------------------
-// Versió iterativa
-public static int sumaDigits(int x) {
-    int suma = 0;
-    while (x > 0) {
-        suma += x % 10;
-        x /= 10;
-    } 
-    return suma;
-    }
 ```
+
+:::
+::::
+
+**Solució iterativa:**
+
+- Bucle while per a anar extraient i sumant cada dígit en cada iteració.
+- Es divideix entre 10 en cada pas per a eliminar el dígit ja processat.
 
 **Solució recursiva:**
 
@@ -116,17 +156,22 @@ public static int sumaDigits(int x) {
   2. Es divideix entre 10 per a eliminar eixe dígit
   3. Se suma el dígit extret amb una anomenada recursiva a la resta del número
 
-**Solució iterativa:**
-
-- Bucle while per a anar extraient i sumant cada dígit en cada iteració.
-- Es divideix entre 10 en cada pas per a eliminar el dígit ja processat.
-
-## Torres de Hanói
+## Torres de Hanoi
 
 El problema consisteix a moure n discos d'un pilar origen a un pilar destine, passant per un pilar auxiliar, subjecte a estes restriccions:
 
 - Només es pot moure un disc alhora.
 - Mai es pot col·locar un disc major sobre un menor.
+
+:::: tabs
+=== Java
+
+::: tabs
+== Solució iterativa
+
+No te versió iterativa sencilla
+
+== Solució recursiva
 
 ```java
 // Versió recursiva
@@ -139,9 +184,12 @@ public static void hanoi(int n, char origen, char aux, char desti) {
         hanoi(n-1, aux, origen, desti);
     }
 }
---------------------------------------------------
-// No te versió iterativa sencilla
+
 ```
+
+:::
+::::
+
 
 **Solució recursiva:**
 

@@ -6,47 +6,80 @@ Nota: Cap funció mostrarà res per pantalla llevat que es diga el contrari.
 
 1. Escriu un programa que demane dos nombres reals per teclat i mostre per pantalla el resultat de multiplicar-los. Implementa i utilitza la funció:  
 
+::: tabs
+== Java
+
 ```java
 // Retorna la multiplicació de dos números.
 double multiplica(double a, double b) 
 ```
 
+:::
+
 2. Escriu un programa que demane l'edat per teclat i mostre per pantalla si eres major d'edat o no. Implementa i utilitza la funció:
+
+::: tabs
+== Java
 
 ```java
 // Retorna vertader si a>=18, fals en cas contrari
 boolean esMajorEdat(int a) 
 ```
 
+:::
+
 3. Escriu un programa que demane dos nombres enters per teclat i mostre per pantalla com és el mínim. Implementa i utilitza la funció:
+
+::: tabs
+== Java
 
 ```java
 // Retorna el menor entre a i b
 int minim(int a, int b) 
 ```
 
+:::
+
 4. Escriu un programa que demane un nombre enter per teclat i mostre per pantalla si és positiu, negatiu o zero. Implementa i utilitza la funció:
+
+::: tabs
+== Java
 
 ```java
 // Retorna -1 si es negatiu, 0 si es sigual a 0 , 1 si es positiu
 int dimeSigne(int a) 
 ```
 
+:::
+
 5. Escriu un programa que demane un valor sencer en milles i mostre el seu equivalent en quilòmetres. Recorda que una milla són 1,60934 quilòmetres. Implementa i utilitza la funció:
+
+::: tabs
+== Java
 
 ```java
 // Retorna la conversió de milles a quilòmetres
 double milles_a_quilometres(int milles)
 ```
 
+:::
+
 6. Escriu un programa que demane cinc preus i mostre per pantalla el preu de venda de cadascun després d’aplicar-li un 21% d'IVA. Implementa i utilitza la funció:
+
+::: tabs
+== Java
 
 ```java
 // Retorna el preu després de sumar-li un 21% d'IVA
 double preuAmbIVA(double preu) 
 ```
 
+:::
+
 7. Escriu un programa que demane l'ample i alt d'un rectangle i mostre per pantalla la seua àrea i el seu perímetre. Implementa i utilitza les funcions:
+
+::: tabs
+== Java
 
 ```java
 // Retorna el perímetre
@@ -56,7 +89,12 @@ double perimetreRectangul(double ample, double alt)
 double areaRectangul(double ample, double alt) 
 ```
 
+:::
+
 8. Escriu un programa que demane un valor N sencer i després mostre: el sumatori des d’1 a N, el productori d'1 a N i el valor intermedi entre 1 i N. Implementa i utilitza les funcions:
+
+::: tabs
+== Java
 
 ```java
 // Retorna la suma d'enters d'1 a n
@@ -68,6 +106,8 @@ int producte1aN(int n)
 // Retorna el valor intermedi entre 1 i n
 double intermedi1aN(int n) 
 ```
+
+:::
 
 ## 1.2. Funcions - Nivell B
 
@@ -100,6 +140,9 @@ Per exemple: 3 ² + 4 ² = 5 ².
 21. Escriu un programa que mostre un menú amb 2 opcions: “1.Circumferència” i “2.Àrea”.  
 En ambdues se li demanarà a l'usuari que introduïsca un radi i després se li mostrarà el càlcul oportú. Implementa les funcions:
 
+::: tabs
+== Java
+
 ```java
 int menu() // Mostra el menú i retorna el número triat
 double demanaRadi() // Demana que s'introduïsca el radi i el retorna
@@ -107,11 +150,18 @@ double circumferencia(double r) // Calcula la circumferència i la retorna
 double area(double r) // Calcula l'àrea i la retorna
 ```
 
+:::
+
 Modifica el programa afegint una altra opció anomenada “Volum”, permetent que l'usuari també puga sol·licitar el càlcul del volum. Afig la funció:
+
+::: tabs
+== Java
 
 ```java
 double volum(double r) // Calcula el volum i el retorna
 ```
+
+:::
 
 Modifica el programa afegint una altra opció anomenada “Totes” en la qual es demane el radi una sola vegada i es mostren els tres càlculs possibles (circumferència, àrea i volum).
 
@@ -221,7 +271,7 @@ Así tens una descripció pas a pas de l'execució:
 **Primera crida (index 0):**
 
 ```
-1. Cas incluint l'1:
+1. Cas incloent l'1:
    - Recursió amb sumaDesitjada = 49, index = 0
 2. Cas sense incloure l'1:
    - Recursió amb sumaDesitjada = 50, index = 1
@@ -272,6 +322,9 @@ En aquests moments, per a l'UF06 tenim creat el projecte UF06Exercicis que cont�
 
 - En l’arxiu **UF06Diverses** creareu dos funcions de propòsit general com són la comprovació de si un numero és primer i el número de dígits que conté un número enter. És important que s’incloguen els comentaris amb les etiquetes que comencen per @ per a completar altres aspectes de l’exercici que vorem més endavant. Aquest és el codi que s’hi ha d’incloure:
 
+::: tabs
+== Java
+
 ```java
 /**
 * Funcions matemàtiques de propòsit general
@@ -315,7 +368,12 @@ public class UF06Diverses {
 }
 ```
 
+:::
+
 - Per a l’arxiu **UF06Geometria** crearem també altres dos funcions. Aquest és el codi que hi haureu d’incloure:
+
+::: tabs
+== Java
 
 ```java
 /**
@@ -343,28 +401,46 @@ public class UF06Geometria {
 }
 ```
 
+:::
+
 - Ara ja podeu començar a crear el codi del programa principal, però en aquesta ocasió ho fareu poc a poc per fer unes comprovacions que ens permetran respondre algunes qüestions.
 
 Aneu a crear el programa (arxiu o classe) **UF06Exercici22.java** dins del paquet curs.uf06exercicis (o on tingueu emmagatzemats la resta d’exercicis del tema).
 
 El primer que haureu de fer és importar aquestes classes per poder utilitzar les funcions matemàtiques creades abans dins.
 
-**COMPTE: Un dels estàndards que recomana Java és organitzar les importacions per orde alfabètic.**
+::: warning COMPTE
+Un dels estàndards que recomana Java és organitzar les importacions per orde alfabètic.**
+
+:::
 
 Aleshores, heu d’escriure vosaltres les dos importacions de les classes que acabeu de crear, però recordeu que s’ha de citar el paquet on estan, un punt i el nom de la classe. Si no ho feu correctament vos començaran a aparèixer errors quan inclogueu les cridades a les funcions.
+
+::: tabs
+== Java
 
 ```java
 import ... ;
 import ... ;
 ```
 
+:::
+
 Finalment, importarem el mètode Scanner:
+
+::: tabs
+== Java
 
 ```java
 import java.util.Scanner;
 ```
 
+:::
+
 Ara anem a copiar una part del codi del programa principal. El que ens interessa per a aquest exercici és arribar a la línia que haureu d’escriure poc a poc en lloc de copiar.
+
+::: tabs
+== Java
 
 ```java
 /**
@@ -379,6 +455,8 @@ public class UF06Exercici22 {
     n = entrada.nextInt();
  ```
 
+ :::
+
 Seguidament aneu a escriure la següent instrucció (no copiar), i al mateix temps haureu de respondre a les qüestions que es plantegen:
 
 a) Què passa quan escrivim `if (curs.uf06matematiques.` en arribar al punt?
@@ -392,6 +470,9 @@ d) Què hem fet en les nostres funcions per a que passe açò?
 Completeu la línia (1a línia del següent codi) i còpieu la resta del codi.
 
 Podeu fer la mateixa prova amb la resta de mètodes o funcions esborrant caràcters i reescrivint-les fins a cada punt.
+
+::: tabs
+== Java
 
 ```java
     if (curs.uf06matematiques.UF06Diverses.esPrimer(n)) {
@@ -418,6 +499,8 @@ Podeu fer la mateixa prova amb la resta de mètodes o funcions esborrant caràct
   }
 }
 ```
+
+:::
 
 e) Aneu ara a la classe **UF06Diverses** i elimineu la paraula **public** en la declaració de la funció **esPrimer**. A continuació executeu el programa **UF06Exercici22.java**. Quin error dona? Què significa?
 
