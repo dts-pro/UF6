@@ -1,12 +1,12 @@
 # 3. Cridar una funció
 
-Les funcions poden ser invocades o cridades des de qualsevol altra funció, inclosa ella mateixa. Sí, una funció pot cridar a qualsevol altra funció, i una funció pot cridar-se a si mateixa.
+Les funcions poden ser invocades des de qualsevol altra funció, inclosa ella mateixa.
 
-De totes maneres, ara com ara cridarem funcions només des de la funció principal ‘main'. Així és més senzill d'aprendre al principi.
+Tot i això, per començar, és recomanable cridar funcions només des de la funció principal main, ja que facilita l'aprenentatge i la comprensió del flux del programa.
 
-Quan s'invoca una funció el flux d'execució salta a la funció (passant-li els paràmetres, en cas d'haver), s'executen les instruccions de la funció i finalment torna al punt que va cridar a la funció per a continuar executant-se.
-Les funcions s'invoquen amb el seu nom, passant la llista de paràmetres entre
-parèntesis. Si no té paràmetres han de posar-se els parèntesis igualment. Si la funció retorna un valor, per a recollir-lo cal assignar-lo a una variable o utilitzar-lo d'alguna manera (poden combinar-se funcions en expressions i fins i tot passar-ho a altres funcions).
+Quan s'invoca una funció, l'execució del programa salta al cos d'aquesta funció (passant-li els paràmetres si n'hi ha). S'executen les seues instruccions i, en acabar, l'execució torna al punt on havia sigut cridada per a continuar amb el programa.
+
+Les funcions s'invoquen pel seu nom, seguit d'un parèntesi que conté la llista de paràmetres. Si no hi ha cap paràmetre, igualment cal incloure els parèntesis. Si la funció retorna un valor, aquest pot assignar-se a una variable o utilitzar-se directament, per exemple dins d'una expressió o com a argument d'una altra funció.
 
 Exemple utilitzant les funcions de l'apartat anterior:
 
@@ -34,8 +34,71 @@ public static void main(String[] args) {
 
 >***Exemple: Programa amb una funció que suma dos números.***
 >
->![Exemple funció suma](/uf6/exemple_suma.jpg)
+>::: tabs
+>== Java
+>
+>```java
+>import java.util.Scanner;
+>
+>public class Suma {
+>
+>    public static void main(String[] args) {
+>        Scanner sc = new Scanner(System.in);
+>        int num1, num2, suma;
+>
+>        System.out.print("Introdueix un número: ");
+>        num1 = sc.nextInt();
+>
+>        System.out.print("Introdueix un altre número: ");
+>        num2 = sc.nextInt();
+>
+>        suma = suma(num1, num2);
+>
+>        System.out.println("La suma és: " + suma);
+>    }
+>
+>    public static int suma(int n1, int n2) {
+>        int suma;
+>        suma = n1 + n2;
+>        return suma;
+>    }
+>}
+>```
+>
+>:::
 
 >***Exemple: Programa amb una funció que determina si un número és parell o imparell.***
 >
->![Exemple funció par](/uf6/exemple_par.jpg)
+>::: tabs
+>== Java
+>
+>```java
+>import java.util.Scanner;
+>
+>public class ParImpar {
+>
+>    public static void main(String[] args) {
+>        Scanner in = new Scanner(System.in);
+>        int num;
+>
+>        System.out.print("Introdueix un número: ");
+>        num = in.nextInt();
+>
+>        if (par(num) == true)  // Crida a la funció des de l'expressió
+>            System.out.println(num + " és parell.");
+>        else
+>            System.out.println(num + " és senar.");
+>    }
+>
+>    public static boolean par(int numero) {
+>        boolean par = false;
+>
+>        if (numero % 2 == 0)  // Si el residu és 0, és parell ('true'); si no, 'false'
+>            par = true;
+>
+>        return par;
+>    }
+>}
+>```
+>
+>:::
