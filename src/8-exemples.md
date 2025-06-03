@@ -37,17 +37,17 @@ public static int factorial(int n) {
 
 **Solució iterativa:**
 
-- S'usa un bucle *for per a iterar des d'1 fins a n, calculant el producte en cada pas.
+- S'usa un bucle for per a iterar des d'1 fins a n, calculant el producte en cada pas.
 
 **Solució recursiva:**
 
-- Caso base: Si n és igual a 1, es retorna 1 (el factorial d'1 és 1).
-- Caso general: Es fa una anomenada recursiva calculant el factorial de n-1 i es multiplica eixe resultat per n.
+- Cas base: Si n és igual a 1, es retorna 1 (el factorial d'1 és 1).
+- Cas general: Es fa una anomenada recursiva calculant el factorial de n-1 i es multiplica eixe resultat per n.
 
     Per exemple, per a calcular 5! es té:
   1. factorial(4) crida a factorial(3)
   2. factorial(3) crida a factorial(2)
-  3. factorial(2) flama a factorial(1) ---> retorna 1
+  3. factorial(2) crida a factorial(1) ---> retorna 1
   4. factorial(2) retorna 1 * 2 = 2
   5. factorial(3) retorna 2 * 3 = 6
   6. factorial(4) retorna 6 * 4 = 24
@@ -104,7 +104,7 @@ public static int fibonacci(int n) {
 **Solució recursiva:**
 
 - Casos base: `F(0) = 0` i `F(1) = 1`
-- Cas general: Suma els dos números anteriors cridant *recursivament a la funció.
+- Cas general: Suma els dos números anteriors cridant recursivament a la funció.
 
 ## Suma de dígits
 
@@ -169,7 +169,7 @@ El problema consisteix a moure n discos d'un pilar origen a un pilar destine, pa
 ::: tabs
 == Solució iterativa
 
-No te versió iterativa sencilla
+No te versió iterativa senzilla.
 
 == Solució recursiva
 
@@ -189,7 +189,6 @@ public static void hanoi(int n, char origen, char aux, char desti) {
 
 :::
 ::::
-
 
 **Solució recursiva:**
 

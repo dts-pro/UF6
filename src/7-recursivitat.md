@@ -1,11 +1,11 @@
 # 7. Recursivitat
 
-La recursivitat és la capacitat d'una funció o mètode per a cridar-se a si mateixa. Això permet dividir un problema gran en problemes més xicotets similars i resoldre'ls directament.
+La recursivitat és la capacitat d'una funció o mètode per a cridar-se a si mateixa. Això permet dividir un problema gran en problemes més menuts semblants i resoldre'ls de manera directa.
 
 ## 7.1. Elements de la recursivitat
 
-- **Cas base**: Cas més simple que es pot resoldre directament i permet parar les recursions.
-- **Casos recursius**: Crides a si mateixa per a reduir el problema en una instància més menuda i simple.
+- **Cas base**: : Cas més senzill que es pot resoldre directament i que permet aturar les crides recursives.
+- **Casos recursius**: Crides a la mateixa funció per reduir el problema a una instància més menuda i senzilla.
 
 ## 7.2. Tipus de recursivitat
 

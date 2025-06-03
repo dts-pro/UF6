@@ -4,7 +4,7 @@ Les funcions poden retornar valors de diferents tipus, tant valors simples (com 
 
 En tots els casos, s'utilitza una instrucció específica (anomenada habitualment `return`) per a indicar quin valor ha de tornar la funció. En el cas dels valors complexos, la funció sol retornar una referència a la dada original, no una còpia, per la qual cosa qualsevol modificació posterior podria afectar l'element retornat depenent del llenguatge i del context.
 
-Exemple de funcions que retornen valors i referències:
+Exemples de funcions que retornen valors i referències:
 
 ::: tabs
 == Java
